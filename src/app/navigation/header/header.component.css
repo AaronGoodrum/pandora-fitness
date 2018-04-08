@@ -1,0 +1,11 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover,
+a:active {
+    color: lightgrey;
+}

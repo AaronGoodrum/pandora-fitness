@@ -18,6 +18,8 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingComponent } from './training/past-training/past-training.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SideNavListComponent } from './navigation/side-nav-list/side-nav-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     CurrentTrainingComponent,
     NewTrainingComponent,
     PastTrainingComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    SideNavListComponent
   ],
   imports: [
     BrowserModule,

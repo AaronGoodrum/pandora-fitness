@@ -1,0 +1,16 @@
+<mat-toolbar color="accent">
+  <div>
+    <button fxHide.gt-xs mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a routerLink="/" routerLinkActive="active">Pandora-LOGO</a>
+  </div>
+  <div fxFlex fxLayoutGap="10px" fxLayoutAlign="end" fxHide.lt-sm>
+    <a mat-list-item routerLink="/signup"> Sign Up </a>
+    <a mat-list-item routerLink="/login"> Login </a>
+    <a mat-list-item routerLink="/training"> Training</a>
+    <a mat-list-item routerLink="/"> Logout</a>
+  </div>
+</mat-toolbar>
