@@ -1,3 +1,6 @@
-<p>
-  current-training works!
-</p>
+<section class="current-training" fxLayout="column" fxLayoutAlign="center center">
+  <mat-progress-spinner color="warn" mode="determinate" [value]="progress"></mat-progress-spinner>
+  <h2> Current Training at {{progress}}%</h2>
+  <p> Fitness Workout</p>
+  <button mat-raised-button type="submit" color="warn" (click)="onEndTraining()"> End Training </button>
+</section>
