@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
+import { AuthService } from './auth/auth.service';
 
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -46,7 +47,7 @@ import { SideNavListComponent } from './navigation/side-nav-list/side-nav-list.c
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
