@@ -18,7 +18,7 @@
       <a mat-list-item routerLink="/training"> Training</a>
     </div>
     <div *ngIf="isAuth">
-      <a mat-list-item routerLink="/"> Logout</a>
+      <a mat-list-item routerLink="/" (click)="onLogout()"> Logout</a>
     </div>
   </div>
 </mat-toolbar>
