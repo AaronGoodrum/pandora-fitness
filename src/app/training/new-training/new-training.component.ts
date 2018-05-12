@@ -1,6 +1,9 @@
 import { FormControl, Validator } from '@angular/forms';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
+import { TrainingService } from '../exercise.service';
+import { Exercise } from '../exercise.model';
+
 @Component({
   selector: 'app-new-training',
   templateUrl: './new-training.component.html',
@@ -8,6 +11,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class NewTrainingComponent implements OnInit {
   @Output() trainingStart = new EventEmitter<void>();
+  exercise: Exercise;
 
   cardio = [
     {type: 'Walking'},
@@ -18,7 +22,9 @@ export class NewTrainingComponent implements OnInit {
     { type: 'Jumping Rope' }
   ];
 
-  constructor() { }
+  constructor(
+    private trainingService: TrainingService
+  ) { }
 
   ngOnInit() {
   }
