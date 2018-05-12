@@ -8,9 +8,17 @@
     <a routerLink="/" routerLinkActive="active">Pandora-LOGO</a>
   </div>
   <div fxFlex fxLayoutGap="10px" fxLayoutAlign="end" fxHide.lt-sm>
-    <a mat-list-item routerLink="/signup"> Sign Up </a>
-    <a mat-list-item routerLink="/login"> Login </a>
-    <a mat-list-item routerLink="/training"> Training</a>
-    <a mat-list-item routerLink="/"> Logout</a>
+    <div *ngIf="!isAuth">
+      <a mat-list-item routerLink="/signup"> Sign Up </a>
+    </div>
+    <div *ngIf="!isAuth">
+      <a mat-list-item routerLink="/login"> Login </a>
+    </div>
+    <div *ngIf="isAuth">
+      <a mat-list-item routerLink="/training"> Training</a>
+    </div>
+    <div *ngIf="isAuth">
+      <a mat-list-item routerLink="/" (click)="onLogout()"> Logout</a>
+    </div>
   </div>
 </mat-toolbar>

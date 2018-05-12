@@ -1,3 +1,20 @@
-<p>
-  new-training works!
-</p>
+<section class="cadioRun" fxLayout="row" fxLayoutAlign="center">
+  <mat-card fxFlex="400px" fxFlex.lt-sm="100%">
+  <mat-card-title fxLayoutAlign="center">Start Working your Cardio</mat-card-title>
+  <mat-card-content fxLayoutAlign="center">
+    <mat-form-field fxLayoutAlign="center">
+      <mat-select placeholder="Cardio Types" Validators>
+        <mat-option value="walking"> Walking </mat-option>
+        <mat-option value="running"> Running </mat-option>
+        <mat-option value="cycling"> Cycling </mat-option>
+        <mat-option value="rowing"> Rowing </mat-option>
+        <mat-option value="swimming"> Swimming </mat-option>
+        <mat-option value="jumpingRope"> Jumping Rope </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="center">
+    <button mat-button type="submit" (click)="onStartTraining()">Start</button>
+  </mat-card-actions>
+  </mat-card>
+</section>
