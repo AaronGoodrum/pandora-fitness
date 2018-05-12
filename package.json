@@ -33,7 +33,11 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@angular/cli": "^1.7.4",
+=======
+    "@angular/cli": "^6.0.0",
+>>>>>>> 44f3b230066008f5acd3593ab557ce49828ab632
 =======
     "@angular/cli": "^6.0.0",
 >>>>>>> 44f3b230066008f5acd3593ab557ce49828ab632
