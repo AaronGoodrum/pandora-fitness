@@ -21,7 +21,7 @@ import { CurrentTrainingComponent } from './training/current-training/current-tr
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { NewTrainingComponent } from './training/new-training/new-training.component';
 import { PastTrainingComponent } from './training/past-training/past-training.component';
-import { TrainingService } from './training/exercise.service';
+import { TrainingService } from './training/training.service';
 
 
 import { HeaderComponent } from './navigation/header/header.component';
