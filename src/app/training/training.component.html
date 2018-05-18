@@ -3,7 +3,7 @@
     <app-new-training></app-new-training>
   </mat-tab>
   <mat-tab *ngIf="onStartTraining" label="Current Training">
-    <app-current-training *ngIf="onStartTraining" (trainingExit)="onStartTraining = false"></app-current-training>
+    <app-current-training *ngIf="onStartTraining"></app-current-training>
   </mat-tab>
   <mat-tab label="Past Training">
     <app-past-training></app-past-training>

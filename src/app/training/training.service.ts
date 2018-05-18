@@ -1,6 +1,6 @@
 import { Exercise } from './exercise.model';
 
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 export class TrainingService {
     // Exercise value to be multicasted to other with rxjs Subject
@@ -25,5 +25,9 @@ export class TrainingService {
         this.runningExercise = selectedExercise;
         // emit change to exercise
         this.exerciseChanged.next({...this.runningExercise });
+    }
+
+    getRunningExercise() {
+        return {...this.runningExercise };
     }
 }
