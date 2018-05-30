@@ -1,6 +1,8 @@
 # PandoraFitness
 
 `npm install --save-dev angular-cli@latest`
+`npm i @angular/compiler-cli`
+`npm install typescript@'>=2.7.0 <2.8.0'`
 `npm install`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.

@@ -11,11 +11,12 @@ export class TrainingService {
         { id: 'side-lunges', name: 'Side Lunges', duration: 120, calories: 18 },
         { id: 'burpees', name: 'Burpees', duration: 60, calories: 8 }
     ];
-    //Save the Exercise User started 
+    // Save the Exercise User started
     private runningExercise: Exercise;
+    private exercises: Exercise[] = [];
 
     getAvailableExercises() {
-        // Making a copy of array 
+        // Making a copy of array
         return this.availableExercises.slice();
     }
 
@@ -25,6 +26,12 @@ export class TrainingService {
         this.runningExercise = selectedExercise;
         // emit change to exercise
         this.exerciseChanged.next({...this.runningExercise });
+    }
+
+    completeExercise() {
+        this.exercises.push(this.runningExercise);
+        this.runningExercise = null;
+        this.exerciseChanged.next(null);
     }
 
     getRunningExercise() {
