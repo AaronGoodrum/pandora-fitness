@@ -12,7 +12,7 @@ export class TrainingComponent implements OnInit {
   onStartTraining = false;
   exerciseSubscription: Subscription;
 
-  constructor( 
+  constructor(
     private trainingService: TrainingService) { }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import { Exercise } from './exercise.model';
 
 import { Subject } from 'rxjs';
+import { state } from '@angular/animations';
 
 export class TrainingService {
     // Exercise value to be multicasted to other with rxjs Subject
@@ -29,7 +30,25 @@ export class TrainingService {
     }
 
     completeExercise() {
-        this.exercises.push(this.runningExercise);
+        // push the running exercises as in OBJ
+        this.exercises.push({
+            ...this.runningExercise,
+            date: new Date(),
+            state: 'completed'
+        });
+        this.runningExercise = null;
+        this.exerciseChanged.next(null);
+    }
+
+    cancelExercise(progress: number) {
+        // push the running exercises as in OBJ
+        this.exercises.push({
+          ...this.runningExercise,
+          duration: this.runningExercise.duration * (progress / 100),
+          calories: this.runningExercise.duration * (progress / 100),
+          date: new Date(),
+          state: 'cancelled'
+        });
         this.runningExercise = null;
         this.exerciseChanged.next(null);
     }
