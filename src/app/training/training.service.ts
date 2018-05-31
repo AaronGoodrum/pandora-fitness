@@ -1,7 +1,6 @@
 import { Exercise } from './exercise.model';
 
 import { Subject } from 'rxjs';
-import { state } from '@angular/animations';
 
 export class TrainingService {
     // Exercise value to be multicasted to other with rxjs Subject
@@ -51,9 +50,15 @@ export class TrainingService {
         });
         this.runningExercise = null;
         this.exerciseChanged.next(null);
+        console.log(this.exercises);
     }
 
     getRunningExercise() {
         return {...this.runningExercise };
+    }
+
+    getCompletedOrCancelledExercises() {
+        console.log(this.exercises);
+        return this.exercises.slice();
     }
 }

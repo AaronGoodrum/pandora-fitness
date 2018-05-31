@@ -1,3 +1,36 @@
-<p>
-  past-training works!
-</p>
+<!-- DataSource object that implements the connect/disconnect interface -->
+<mat-table [dataSource]="dateSource">
+  <!-- DATE -->
+  <!-- Defines a set of cells available for a table column. -->
+  <ng-container matColumnDef="date">
+     <!-- Captures the template of a column's header cell and as well as cell-specific properties. -->
+    <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+     <!-- Captures the template of a column's data row cell as well as cell-specific properties. -->
+    <mat-cell *matCellDef="let element">{{ element.date | date }}</mat-cell>
+  </ng-container>
+  <!-- NAME -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+  </ng-container>
+  <!-- CALORIES -->
+  <ng-container matColumnDef="calories">
+    <mat-header-cell *matHeaderCellDef>Calories</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.calories | number }}</mat-cell>
+  </ng-container>
+  <!-- DURATION -->
+  <ng-container matColumnDef="duration">
+    <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.duration | number }}</mat-cell>
+  </ng-container>
+  <!-- STATE -->
+  <ng-container matColumnDef="state">
+    <mat-header-cell *matHeaderCellDef>State</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.state }}</mat-cell>
+  </ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+<mat-row *matRowDef="let row; columns: displayedColumns;"> </mat-row>
+
+</mat-table>

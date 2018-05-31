@@ -46,7 +46,6 @@ export class CurrentTrainingComponent implements OnInit {
       } else {
         this.startOrResumeTimer();
       }
-      console.log(result);
-    } );
+    });
   }
 }
